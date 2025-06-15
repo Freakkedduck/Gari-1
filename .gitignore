@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+data/uploads/
+data/extracted/
+chroma_store/

@@ -1,14 +1,19 @@
-fastapi                   # Web framework
-uvicorn                   # ASGI server to run FastAPI
-python-multipart          # Enables file uploads via FastAPI
-python-docx
+# --- FastAPI & Web Server ---
+fastapi
+uvicorn
+python-multipart
 
-pdfplumber                # Extracts text from PDF files
-pillow                    # Image handling (used with pytesseract)
-pytesseract               # OCR for scanned images
+# --- Basic Text Extraction ---
+pdfplumber            # For lightweight PDF text/tables
+python-docx           # For DOCX parsing
+pillow                # For image processing
 
-chromadb                  # (Used starting Day 3)
+# --- Advanced PDF & Layout Parsing ---
+PyMuPDF               # Layout-aware PDF extraction (aka fitz)
 
-# Optional for extended parsing/cleaning (install if needed later):
-nltk                    # Sentence/word tokenization (for chunking)
-unidecode               # ASCII normalization (optional cleaning step)
+# --- OCR ---
+pytesseract           # OCR from images
+pdf2image             # Convert PDF pages to images
+
+# --- Optional Utilities ---
+tqdm                  # For progress bars during batch processing

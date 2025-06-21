@@ -1,8 +1,13 @@
-fastapi
-uvicorn
-python-multipart
-pdfplumber
-pillow
-pytesseract
-chromadb
+fastapi                   # Web framework
+uvicorn                   # ASGI server to run FastAPI
+python-multipart          # Enables file uploads via FastAPI
 
+pdfplumber                # Extracts text from PDF files
+pillow                    # Image handling (used with pytesseract)
+pytesseract               # OCR for scanned images
+
+chromadb                  # (Used starting Day 3)
+
+# Optional for extended parsing/cleaning (install if needed later):
+nltk                    # Sentence/word tokenization (for chunking)
+unidecode               # ASCII normalization (optional cleaning step)

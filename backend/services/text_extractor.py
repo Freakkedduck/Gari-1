@@ -7,6 +7,9 @@ import uuid
 import docx
 
 def extract_text_from_file(filepath: str, doc_id: str) -> dict:
+    extracted_dir = "data/extracted"
+    os.makedirs(extracted_dir, exist_ok=True)  
+
     ext = os.path.splitext(filepath)[-1].lower()
 
     if ext == ".pdf":
@@ -17,11 +20,12 @@ def extract_text_from_file(filepath: str, doc_id: str) -> dict:
         with open(filepath, "r", encoding="utf-8") as f:
             raw = f.read()
         structured = [{"page": 1, "paragraphs": split_paragraphs(raw)}]
+    elif ext == ".docx":
+        structured = extract_from_docx(filepath)
     else:
         return {"error": "Unsupported file type."}
 
-    # Save to data/extracted/{doc_id}.json
-    save_path = f"data/extracted/{doc_id}.json"
+    save_path = f"{extracted_dir}/{doc_id}.json"
     with open(save_path, "w", encoding="utf-8") as f:
         json.dump(structured, f, ensure_ascii=False, indent=2)
 

@@ -24,3 +24,4 @@ sentence-transformers
 
 # --- frontend ---
 streamlit             # For building the web interface
+ollama # For LLM inference

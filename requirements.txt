@@ -17,3 +17,7 @@ pdf2image             # Convert PDF pages to images
 
 # --- Optional Utilities ---
 tqdm                  # For progress bars during batch processing
+
+# --- vector databases ---
+chromadb
+sentence-transformers

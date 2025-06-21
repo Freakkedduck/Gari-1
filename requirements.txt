@@ -21,3 +21,6 @@ tqdm                  # For progress bars during batch processing
 # --- vector databases ---
 chromadb
 sentence-transformers
+
+# --- frontend ---
+streamlit             # For building the web interface

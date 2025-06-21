@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File
-from services.text_extractor import extract_text_from_file
-from models.document import DocumentMeta
+from backend.services.text_extractor import extract_text_from_file
+from backend.models.document import DocumentMeta
 import os, uuid
 
 router = APIRouter()

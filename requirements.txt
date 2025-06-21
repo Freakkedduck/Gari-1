@@ -1,6 +1,7 @@
 fastapi                   # Web framework
 uvicorn                   # ASGI server to run FastAPI
 python-multipart          # Enables file uploads via FastAPI
+python-docx
 
 pdfplumber                # Extracts text from PDF files
 pillow                    # Image handling (used with pytesseract)

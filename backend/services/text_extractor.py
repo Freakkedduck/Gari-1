@@ -4,6 +4,7 @@ import pytesseract
 import os
 import json
 import uuid
+import docx
 
 def extract_text_from_file(filepath: str, doc_id: str) -> dict:
     ext = os.path.splitext(filepath)[-1].lower()
@@ -47,6 +48,12 @@ def extract_from_image(filepath: str):
         "page": 1,
         "paragraphs": split_paragraphs(clean_text(text))
     }]
+
+def extract_from_docx(filepath: str):
+    doc = docx.Document(filepath)
+    full_text = "\n".join([para.text for para in doc.paragraphs if para.text.strip()])
+    return [{"page": 1, "paragraphs": split_paragraphs(clean_text(full_text))}]
+
 
 def clean_text(text: str) -> str:
     return text.replace('\n', ' ').replace('\r', '').strip()

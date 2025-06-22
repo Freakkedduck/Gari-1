@@ -1,4 +1,4 @@
-# DocBot: Document Q&A Chatbot
+# Gari-1: Document Q&A Chatbot
 
 Gari-1 is a modular document question-answering system. It allows you to upload documents, semantically search their content, and ask questions with answers cited from the source.
 

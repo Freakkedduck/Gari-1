@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("DocBot: Document Q&A")
+st.title("Gari-1: Document Q&A")
 
 st.header("Upload Document")
 uploaded_file = st.file_uploader("Choose a file", type=["pdf", "docx", "txt"])

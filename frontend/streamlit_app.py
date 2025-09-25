@@ -32,3 +32,4 @@ if st.button("Submit Query") and question and doc_id:
             st.write(f"DocID: {c['doc_id']}, Page: {c['page']}, Paragraph: {c['paragraph']}")
     else:
         st.error("Query failed.")
+st.placeholder("Built by Kunal Rao")
